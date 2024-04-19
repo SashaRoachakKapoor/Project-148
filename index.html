@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    </head> 
+    <body>
+        <a-scene background="color:black">
+
+            <a-camera position="200 -15 -320"></a-camera>
+
+            <a-assets timeout="10000">
+                <a-asset-item id="road" src="./american_road_underpass_bridge/scene.gltf"></a-asset-item>
+                <a-asset-item id="cat" src="./bicolor_cat/scene.gltf"></a-asset-item>
+                <a-asset-item id="girl" src="./black_halter_dress/scene.gltf"></a-asset-item>
+                <a-asset-item id="buildings" src="./low_poly_night_city_building_skyline/scene.gltf"></a-asset-item>
+                <a-asset-item id="lamp_post" src="./victorian_lamppost/scene.gltf"></a-asset-item>
+            </a-assets>
+
+            <a-sky src="https://media.istockphoto.com/id/1485506717/photo/colorful-sunset-over-the-water-surface.webp?b=1&s=170667a&w=0&k=20&c=c02H_IejBql2Ng0SsF9_-N2KS7IOEsUInEOpxRA2ZKA="></a-sky>
+
+            <a-entity animation="property:rotation; to:0 360 0; easing:linear; loop:true; dur: 300000">
+                <a-entity light="type:directional;castShadow:false; intensity:5; distance:50; decay:2 ; color: yellow" position="-100 18 20">
+                </a-entity>
+
+              </a-entity>
+              <a-entity position="600 0 -500" gltf-model="#road" cast-shadow:false intensity="5" >
+              </a-entity>
+              </a-entity>
+
+              <a-entity>
+                <a-entity position="200 -14.75 -325" gltf-model="#lamp_post" cast-shadow="true"></a-entity>
+              </a-entity>
+
+              <a-entity>
+                <a-entity position="201 -16 -325" gltf-model="#cat" cast-shadow="true"></a-entity>
+              </a-entity>
+              
+              <a-entity>
+                <a-entity position="202 -16 -325" gltf-model="#girl" cast-shadow="true"></a-entity>
+              </a-entity>
+              
+              <a-entity>
+                <a-entity position="201 -18 -350" gltf-model="#buildings" cast-shadow="true"></a-entity>
+              </a-entity>
+
+        </a-scene>
+    </body>
+</html>
